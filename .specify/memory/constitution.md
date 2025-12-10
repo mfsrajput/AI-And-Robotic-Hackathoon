@@ -1,55 +1,45 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Constitution of the Physical AI & Humanoid Robotics Textbook
 
-## Core Principles
+## Preamble
+Ratified on 2025-12-07. This Constitution governs all content, tooling, and deployment.
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+## Article I – Core Mission
+Open-source university-level textbook teaching embodied intelligence using ROS 2, Gazebo, Unity, NVIDIA Isaac Sim, and Vision-Language-Action models.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+## Article II – Governing Principles (order of precedence)
+1. Spec-Driven Development First
+2. Pedagogical Excellence
+3. Technical Accuracy & Depth
+4. Embodiment-Centric Perspective
+5. Open-Source & Reproducible Science
+6. Inclusive & Accessible Design
+7. Living Document & Continuous Improvement
+8. Ethical & Societally Aware Robotics
+9. Aesthetic & Professional Presentation
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+## Article III – Expanded Pedagogical Principles (10 binding rules)
+1. 3–7 explicit learning objectives per chapter (Bloom's taxonomy)
+2. Progressive knowledge construction (scaffolded difficulty)
+3. Active learning mandate every ~2000 words
+4. Dual-track design: Theory ↔ Practice (cross-linked)
+5. Worked examples: black-box → glass-box progression
+6. Tiered assessments (Tier 1–3) with rubrics
+7. Inclusive & accessible design (alt-text, global examples)
+8. Metacognitive support (Common Pitfalls, Debugging Intuition)
+9. ≥2 interdisciplinary connections per chapter
+10. Feedback-driven evolution (widget + GitHub Issues)
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Article IV – Content Quality Gates
+Every chapter must pass all 10 pedagogical principles before merge.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Article V – Technical Standards
+- Docusaurus 3 + MDX
+- Mermaid diagrams only
+- Python 3.11+, ROS 2 Humble (primary)
+- APA citations
+- GitHub Pages deployment
 
-### [PRINCIPLE_6_NAME]
+## Article VI – Governance & Amendment
+66% maintainer vote + 14-day public comment period required to amend.
 
-
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
-
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
-
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-07
