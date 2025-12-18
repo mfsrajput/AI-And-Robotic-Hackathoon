@@ -1,21 +1,19 @@
-# Physical AI & Humanoid Robotics Textbook with RAG Chatbot
+# Physical AI & Humanoid Robotics – COMPLETE ✅
 
-**Project Status**: COMPLETE ✅
-**Live URL**: https://mfsrajput.github.io/AI-And-Robotic-Hackathoon/
-**Backend Repo**: https://github.com/mfsrajput/Backend-AI-And-Robotic-Hackathoon
+- **Live Demo**: https://mfsrajput.github.io/AI-And-Robotic-Hackathoon/
+- **Backend Repo**: https://github.com/mfsrajput/Backend-AI-And-Robotic-Hackathoon
 
 This comprehensive textbook site features an integrated Retrieval-Augmented Generation (RAG) chatbot using Cohere's embedding and language models for intelligent question-answering about Physical AI & Humanoid Robotics.
 
-## Features
+## Key Features
 
-- **RAG Chatbot**: Intelligent question-answering system with streaming responses
-- **Cohere Integration**: Uses Cohere's embed-english-v3.0 for embeddings and command-r-08-2024 for generation
-- **Qdrant Vector Database**: Stores document embeddings for efficient retrieval
-- **Selected-Text Queries**: Supports "Ask about this" functionality for selected text context
-- **Content Freshness**: API endpoint to refresh content from the live textbook site
-- **Constitution-Compliant**: Strictly follows RAG Chatbot Constitution (accuracy, source fidelity, privacy)
-- **Streaming Responses**: Real-time response generation with typing indicators
-- **Source Citations**: Automatic source attribution with links to original content
+- **Full open-source robotics textbook**: Complete 4-module curriculum (ROS 2, Digital Twin, NVIDIA Isaac, VLA System)
+- **Embedded RAG chatbot with selected-text**: "Ask about this" functionality for selected text context
+- **Powered by Cohere**: Uses embed-english-v3.0 for embeddings and command-r-08-2024 for generation
+- **Streaming responses**: Real-time response generation with typing indicators and error handling
+- **Source citations**: Automatic source attribution with links to original content
+- **Built spec-driven**: Developed with Spec-Kit Plus methodology
+- **Governed by two AI Constitutions**: RAG Chatbot Constitution and Physical AI Constitution for ethical AI
 
 ## How to Run Locally
 
