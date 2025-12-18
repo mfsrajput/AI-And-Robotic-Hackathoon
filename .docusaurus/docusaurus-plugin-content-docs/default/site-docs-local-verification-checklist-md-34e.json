@@ -1,0 +1,24 @@
+{
+  "id": "local-verification-checklist",
+  "title": "Local Verification Checklist for Physical AI & Humanoid Robotics Textbook Site",
+  "description": "This checklist ensures that the Docusaurus textbook site is fully functional before public release. Complete each item to verify the site works correctly on http3000.",
+  "source": "@site/docs/local-verification-checklist.md",
+  "sourceDirName": ".",
+  "slug": "/local-verification-checklist",
+  "permalink": "/local-verification-checklist",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/local-verification-checklist.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/intro"
+  },
+  "next": {
+    "title": "Preface",
+    "permalink": "/preface"
+  }
+}

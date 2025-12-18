@@ -1,0 +1,25 @@
+{
+  "id": "vla/voice-to-action-with-whisper",
+  "title": "Chapter 1: Voice-to-Action using OpenAI Whisper (Local Implementation)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/04-vla/01-voice-to-action-with-whisper.md",
+  "sourceDirName": "04-vla",
+  "slug": "/vla/voice-to-action-with-whisper",
+  "permalink": "/vla/voice-to-action-with-whisper",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/04-vla/01-voice-to-action-with-whisper.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Sim-to-Real Transfer Techniques",
+    "permalink": "/nvidia-isaac/sim-to-real-transfer"
+  },
+  "next": {
+    "title": "Chapter 2: LLM Task & Motion Planning (Natural Language → ROS Actions)",
+    "permalink": "/vla/llm-task-and-motion-planning"
+  }
+}

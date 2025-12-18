@@ -1,0 +1,228 @@
+# Tasks: Module 4 - Vision-Language-Action (VLA) + Capstone
+
+**Feature**: Module 4 - Vision-Language-Action (VLA) + Capstone | **Branch**: `001-vla-capstone`
+
+## Implementation Strategy
+
+MVP scope: Complete User Story 1 (Voice Command Processing) with minimal viable documentation and examples. This provides the foundational capability for voice-controlled humanoid systems that can respond to natural language instructions. Subsequent user stories build incrementally on this foundation.
+
+## Dependencies
+
+User stories should be completed in priority order:
+1. User Story 1 (P1) - Voice Command Processing - Foundation for all other capabilities
+2. User Story 4 (P1) - Complete Autonomous Humanoid Capstone - Uses capabilities from all other stories
+3. User Story 2 (P2) - Natural Language to ROS Action Mapping - Builds on voice processing
+4. User Story 3 (P3) - Multi-Modal Perception Integration - Integrates with previous capabilities
+
+## Parallel Execution Examples
+
+Within each user story phase, the following tasks can be executed in parallel:
+- Documentation tasks (chapter content) can run in parallel with code examples
+- Configuration files can be created in parallel with launch files
+- Diagrams can be created in parallel with code development
+
+## Phase 1: Setup Tasks
+
+Goal: Initialize project structure and environment for VLA module development
+
+- [x] T001 Create docs/04-vla directory structure per implementation plan
+- [x] T002 Create launch/ directory structure per implementation plan
+- [x] T003 Create config/ directory structure per implementation plan
+- [x] T004 Create scripts/ directory structure per implementation plan
+- [x] T005 Create assets/diagrams directory structure per implementation plan
+- [x] T006 Create assets/code-examples directory structure per implementation plan
+- [x] T007 Create docs/04-vla/_category_.json file per requirements
+
+## Phase 2: Foundational Tasks
+
+Goal: Set up foundational components that support all user stories
+
+- [x] T008 Create basic ROS 2 package structure for VLA components
+- [x] T009 Set up configuration files for Whisper model integration (Whisper.cpp)
+- [x] T010 Set up configuration files for LLM integration (Ollama/Llama-based)
+- [x] T011 Set up configuration files for VLA pipeline
+- [x] T012 Create common data models based on data-model.md with explicit ROS action server support
+- [x] T013 Create ROS 2 action server interfaces for voice control with standard navigation and manipulation actions
+- [x] T014 Create logging and observability utilities for educational purposes
+- [x] T015 Create error handling utilities with educational focus
+- [x] T016 Verify Python 3.11+ compatibility across all components
+- [x] T017 Create accessibility compliance utilities for WCAG 2.1 AA verification
+- [x] T018 Create LLM prompt templates configuration file (FR-006) in config/llm_prompt_templates.yaml
+- [ ] T019 Create ROS 2 action server interfaces in scripts/multi_modal/ros2_action_interfaces.py
+
+## Phase 3: [US1] Voice Command Processing for Humanoid Robot
+
+Goal: Students can convert voice commands to robot actions using local Whisper models
+
+Independent Test: Students can complete voice-to-action exercises independently, learning how to process spoken commands and convert them to text that can trigger robot behaviors.
+
+- [x] T020 [P] [US1] Create docs/04-vla/01-voice-to-action-with-whisper.md with 3-7 learning objectives
+- [x] T021 [P] [US1] Create voice processing ROS 2 node in scripts/voice_control/voice_processor.py
+- [x] T022 [P] [US1] Create Whisper integration service in scripts/voice_control/whisper_service.py using Whisper.cpp
+- [x] T023 [P] [US1] Create audio input handler in scripts/voice_control/audio_input.py
+- [x] T024 [US1] Create voice command data model based on VoiceCommand entity
+- [x] T025 [US1] Create voice-to-text conversion pipeline
+- [x] T026 [US1] Create noise reduction and preprocessing utilities
+- [x] T027 [US1] Implement privacy-compliant local processing (no external API calls)
+- [x] T028 [P] [US1] Create launch file for voice control system launch/vla_voice_control.launch.py
+- [x] T029 [P] [US1] Create configuration file for voice processing config/whisper_config.yaml
+- [x] T030 [P] [US1] Create Mermaid diagram for voice pipeline assets/diagrams/voice_pipeline.mmd
+- [x] T031 [P] [US1] Create runnable code example for voice processing assets/code-examples/voice_control/voice_demo.py
+- [x] T032 [US1] Create active learning exercise for voice processing in chapter (dual-track theory/practice)
+- [x] T033 [US1] Create worked example: black-box to glass-box for voice processing
+- [x] T034 [US1] Create tiered assessments (Tier 1-3) for voice processing chapter
+- [x] T035 [US1] Add 6-8 APA citations to voice processing chapter
+- [x] T036 [US1] Add Mermaid diagram with alt-text to voice processing chapter (accessibility)
+- [x] T037 [US1] Validate voice processing system works in noisy environment (acceptance scenario)
+- [x] T038 [US1] Ensure chapter meets WCAG 2.1 AA compliance for accessibility
+- [x] T039 [US1] Verify code examples execute in under 2 seconds performance target
+
+## Phase 4: [US4] Complete Autonomous Humanoid Capstone
+
+Goal: Students can build and demonstrate a complete autonomous humanoid that responds to voice commands, navigates environments, and performs tasks
+
+Independent Test: Students can build and demonstrate a complete autonomous humanoid that responds to voice commands, navigates environments, and performs tasks.
+
+- [x] T040 [P] [US4] Create docs/04-vla/04-capstone-autonomous-humanoid.md with 3-7 learning objectives
+- [x] T041 [P] [US4] Create capstone system orchestrator in scripts/capstone_project/capstone_system.py
+- [ ] T042 [P] [US4] Create autonomous humanoid system data model based on AutonomousHumanoidSystem entity
+- [ ] T043 [P] [US4] Create capstone project data model based on CapstoneProject entity
+- [x] T044 [US4] Create capstone execution orchestrator
+- [x] T045 [US4] Create capstone state management system
+- [ ] T046 [US4] Create capstone validation and assessment utilities
+- [ ] T047 [US4] Create comprehensive capstone rubric with grading criteria
+- [x] T048 [P] [US4] Create launch file for complete capstone launch/capstone_demo.launch.py
+- [x] T049 [P] [US4] Create configuration file for capstone system config/vla_pipeline_config.yaml
+- [ ] T050 [P] [US4] Create Mermaid diagram for capstone system assets/diagrams/capstone_system.mmd
+- [ ] T051 [P] [US4] Create comprehensive capstone example in assets/code-examples/capstone_project/capstone_demo.py
+- [ ] T052 [US4] Create active learning exercise for capstone integration (dual-track theory/practice)
+- [ ] T053 [US4] Create worked example: black-box to glass-box for capstone system
+- [ ] T054 [US4] Create tiered assessments (Tier 1-3) for capstone chapter
+- [ ] T055 [US4] Add 6-8 APA citations to capstone chapter
+- [ ] T056 [US4] Add Mermaid diagram with alt-text to capstone chapter (accessibility)
+- [ ] T057 [US4] Implement deep integration with previous modules (ROS 2, Digital Twin, Isaac Sim)
+- [x] T058 [US4] Create capstone validation script scripts/capstone_validator.py
+- [ ] T059 [US4] Validate complete system executes complex multi-step commands (acceptance scenario)
+- [ ] T060 [US4] Ensure chapter meets WCAG 2.1 AA compliance for accessibility
+- [ ] T061 [US4] Verify code examples execute in under 2 seconds performance target
+
+## Phase 5: [US2] Natural Language to ROS Action Mapping
+
+Goal: Students can test the LLM-based task planning system independently, seeing how natural language queries are converted to sequences of ROS actions
+
+Independent Test: Students can test the LLM-based task planning system independently, seeing how natural language queries are converted to sequences of ROS actions.
+
+- [x] T062 [P] [US2] Create docs/04-vla/02-llm-task-and-motion-planning.md with 3-7 learning objectives
+- [x] T063 [P] [US2] Create LLM integration service in scripts/llm_task_planning/llm_service.py using Ollama/Llama
+- [x] T064 [P] [US2] Create action sequence generator in scripts/llm_task_planning/action_generator.py
+- [x] T065 [P] [US2] Create command data model based on Command entity
+- [x] T066 [P] [US2] Create action sequence data model based on ActionSequence entity with explicit ROS action server support
+- [x] T067 [US2] Create prompt engineering utilities for robotics task planning with reusable templates
+- [x] T068 [US2] Create ROS 2 action server interfaces for task planning with standard navigation and manipulation
+- [x] T069 [US2] Create LLM response parsing and validation
+- [x] T070 [P] [US2] Create launch file for LLM integration launch/llm_task_planning.launch.py
+- [x] T071 [P] [US2] Create configuration file for LLM integration config/llm_config.yaml
+- [ ] T072 [P] [US2] Create Mermaid diagram for LLM integration assets/diagrams/llm_integration.mmd
+- [ ] T073 [P] [US2] Create runnable code example for LLM task planning assets/code-examples/llm_task_planning/llm_demo.py
+- [ ] T074 [US2] Create active learning exercise for LLM task planning (dual-track theory/practice)
+- [ ] T075 [US2] Create worked example: black-box to glass-box for LLM integration
+- [ ] T076 [US2] Create tiered assessments (Tier 1-3) for LLM chapter
+- [ ] T077 [US2] Add 6-8 APA citations to LLM chapter
+- [ ] T078 [US2] Add Mermaid diagram with alt-text to LLM chapter (accessibility)
+- [ ] T079 [US2] Validate LLM generates ROS navigation and manipulation actions (acceptance scenario)
+- [x] T080 [US2] Implement comprehensive observability and logging for LLM prompts/responses
+- [ ] T081 [US2] Ensure chapter meets WCAG 2.1 AA compliance for accessibility
+- [ ] T082 [US2] Verify code examples execute in under 2 seconds performance target
+
+## Phase 6: [US3] Multi-Modal Perception Integration
+
+Goal: Students can test multi-modal integration independently, seeing how visual perception and language understanding work together to guide robot actions
+
+Independent Test: Students can test multi-modal integration independently, seeing how visual perception and language understanding work together to guide robot actions.
+
+- [x] T083 [P] [US3] Create docs/04-vla/03-multi-modal-integration.md with 3-7 learning objectives
+- [ ] T084 [P] [US3] Create multi-modal fusion service in scripts/multi_modal/fusion_engine.py
+- [ ] T085 [P] [US3] Create multi-modal input data model based on MultiModalInput entity
+- [ ] T086 [P] [US3] Create visual perception integration utilities
+- [ ] T087 [US3] Create multi-modal state management system
+- [ ] T088 [US3] Create visual-linguistic fusion algorithms
+- [ ] T089 [US3] Create object detection integration with voice commands
+- [ ] T090 [P] [US3] Create Mermaid diagram for multi-modal architecture assets/diagrams/vla_architecture.mmd
+- [ ] T091 [P] [US3] Create runnable code example for multi-modal integration assets/code-examples/multi_modal_integration/multi_modal_demo.py
+- [ ] T092 [US3] Create active learning exercise for multi-modal integration (dual-track theory/practice)
+- [ ] T093 [US3] Create worked example: black-box to glass-box for multi-modal fusion
+- [ ] T094 [US3] Create tiered assessments (Tier 1-3) for multi-modal chapter
+- [ ] T095 [US3] Add 6-8 APA citations to multi-modal chapter
+- [ ] T096 [US3] Add Mermaid diagram with alt-text to multi-modal chapter (accessibility)
+- [ ] T097 [US3] Validate system identifies blue box and navigates to it ("Go to the blue box" scenario)
+- [ ] T098 [US3] Implement comprehensive observability and logging for multi-modal fusion
+- [ ] T099 [US3] Ensure chapter meets WCAG 2.1 AA compliance for accessibility
+- [ ] T100 [US3] Verify code examples execute in under 2 seconds performance target
+
+## Phase 7: Constitution Compliance & Accessibility Tasks
+
+Goal: Ensure all constitutional pedagogical principles and accessibility requirements are met across all chapters
+
+- [ ] T101 [P] Verify all 4 chapters have 3-7 clear learning objectives per constitutional requirement
+- [ ] T102 [P] Verify all 4 chapters implement dual-track theory-practice design
+- [ ] T103 [P] Verify all 4 chapters include active learning exercises every ~2000 words
+- [ ] T104 [P] Verify all 4 chapters have worked examples with black-box to glass-box progression
+- [ ] T105 [P] Verify all 4 chapters include tiered assessments (Tier 1-3) with rubrics
+- [ ] T106 [P] Verify all 4 chapters include Mermaid diagrams with alt-text for accessibility
+- [ ] T107 [P] Verify all 4 chapters include 6-8 real-world citations per chapter in APA format
+- [ ] T108 [P] Verify all 4 chapters support progressive scaffolding and inclusive examples
+- [ ] T109 [P] Verify all 4 chapters include metacognitive support (pitfalls, debugging intuition)
+- [ ] T110 [P] Verify all 4 chapters include interdisciplinary connections (≥2 per chapter)
+- [ ] T111 [P] Verify all 4 chapters include runnable code examples with proper setup
+- [ ] T112 [P] Verify all diagrams have proper alt-text descriptions for screen readers
+- [ ] T113 [P] Verify all code examples are accessible with proper color contrast
+- [ ] T114 [P] Verify all content meets WCAG 2.1 AA color contrast requirements
+- [ ] T115 [P] Verify all content supports keyboard navigation where applicable
+- [ ] T116 [P] Verify all chapters include proper semantic structure for accessibility
+- [ ] T117 [P] Verify all chapters include LLM prompt templates as required by FR-006
+- [ ] T118 [P] Verify all chapters demonstrate integration with previous modules (FR-014, FR-017)
+- [ ] T119 [P] Verify all action sequences include explicit ROS action server names (FR-005)
+- [ ] T120 [P] Verify all chapters follow standardized terminology: "Vision-Language-Action (VLA) pipeline", "action sequence"
+- [ ] T121 [P] Create comprehensive WCAG 2.1 AA accessibility audit for each chapter
+- [ ] T122 [P] Implement automated accessibility checking tools for continuous verification
+- [ ] T123 [P] Create verification script to validate all 10 constitutional pedagogical principles across chapters
+- [ ] T124 [P] Create ROS 2 action server compliance checker for FR-005 requirements
+- [ ] T125 [P] Create LLM prompt template validator for FR-006 requirements
+- [ ] T126 [P] Create previous modules integration verifier for FR-014 and FR-017 requirements
+- [ ] T127 [P] Add specific "Go to the blue box" scenario implementation and validation (US3 acceptance criteria)
+- [ ] T128 [P] Create standardized terminology checker for consistent use of VLA concepts
+
+## Phase 8: Polish & Cross-Cutting Concerns
+
+Goal: Complete all cross-cutting concerns and ensure constitutional compliance across all chapters
+
+- [ ] T129 Create comprehensive test suite for VLA components scripts/test_vla_components.py
+- [ ] T130 Create environment setup script scripts/setup_vla_environment.sh with Python 3.11+ verification
+- [ ] T131 Perform comprehensive WCAG 2.1 AA accessibility audit across all chapters
+- [ ] T132 Verify all code examples execute in under 2 seconds performance target
+- [ ] T133 Add comprehensive error handling with educational focus across all components
+- [ ] T134 Create comprehensive debugging utilities for student learning
+- [ ] T135 Validate all 4 chapters meet constitutional pedagogical standards
+- [ ] T136 Create cross-module consistency validation
+- [ ] T137 Update _category_.json with all 4 chapter entries
+- [ ] T138 Perform final validation of all acceptance scenarios across user stories
+- [ ] T139 Create automated compliance checker for pedagogical principles
+- [ ] T140 Create automated accessibility checker for WCAG compliance
+- [ ] T141 Document all 10 constitutional pedagogical principles implementation across chapters
+- [ ] T142 Update all launch files to demonstrate integration with previous modules
+- [ ] T143 Create documentation for "Go to the blue box" worked example scenario
+
+## Dependencies
+
+User stories should be completed in priority order:
+1. User Story 1 (P1) - Voice Command Processing - Foundation for all other capabilities
+2. User Story 4 (P1) - Complete Autonomous Humanoid Capstone - Uses capabilities from all other stories
+3. User Story 2 (P2) - Natural Language to ROS Action Mapping - Builds on voice processing
+4. User Story 3 (P3) - Multi-Modal Perception Integration - Integrates with previous capabilities
+
+## Parallel Execution Examples
+
+Within each user story phase, the following tasks can be executed in parallel:
+- Documentation tasks (chapter content) can run in parallel with code examples
+- Configuration files can be created in parallel with launch files
+- Diagrams can be created in parallel with code development

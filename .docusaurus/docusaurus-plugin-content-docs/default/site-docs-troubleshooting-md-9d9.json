@@ -1,0 +1,20 @@
+{
+  "id": "troubleshooting",
+  "title": "Troubleshooting Guide for Physical AI & Humanoid Robotics Textbook Site",
+  "description": "This guide addresses common issues that may occur when setting up or running the Docusaurus textbook site.",
+  "source": "@site/docs/troubleshooting.md",
+  "sourceDirName": ".",
+  "slug": "/troubleshooting",
+  "permalink": "/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/troubleshooting.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Preface",
+    "permalink": "/preface"
+  }
+}

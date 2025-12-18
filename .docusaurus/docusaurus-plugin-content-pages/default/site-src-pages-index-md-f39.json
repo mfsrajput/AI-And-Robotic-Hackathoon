@@ -1,0 +1,11 @@
+{
+  "type": "mdx",
+  "permalink": "/",
+  "source": "@site/src/pages/index.md",
+  "title": "Physical AI & Humanoid Robotics",
+  "description": "Building Intelligent Humanoid Robots for the Future",
+  "frontMatter": {
+    "title": "Physical AI & Humanoid Robotics"
+  },
+  "unlisted": false
+}

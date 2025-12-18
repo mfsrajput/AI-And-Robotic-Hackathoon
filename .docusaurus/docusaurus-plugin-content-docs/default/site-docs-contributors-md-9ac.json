@@ -1,0 +1,24 @@
+{
+  "id": "contributors",
+  "title": "Contributors",
+  "description": "The \"Physical AI & Humanoid Robotics\" textbook is the result of collaborative effort from experts across multiple disciplines. We acknowledge and thank all individuals who contributed to this educational resource.",
+  "source": "@site/docs/contributors.md",
+  "sourceDirName": ".",
+  "slug": "/contributors",
+  "permalink": "/contributors",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/contributors.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Constitution of the Integrated RAG Chatbot",
+    "permalink": "/RAG-Chatbot-Constitution"
+  },
+  "next": {
+    "title": "Deployment Guide for GitHub Pages",
+    "permalink": "/deployment"
+  }
+}

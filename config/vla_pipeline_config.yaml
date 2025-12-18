@@ -1,0 +1,66 @@
+# Configuration for complete VLA (Vision-Language-Action) pipeline
+vla_pipeline:
+  # Pipeline execution settings
+  execution:
+    enable_voice_processing: true    # Enable voice-to-text processing
+    enable_llm_planning: true        # Enable LLM-based task planning
+    enable_vision_integration: true  # Enable vision-language fusion
+    enable_action_execution: true    # Enable ROS action execution
+    
+  # Component integration settings
+  components:
+    voice_processor:
+      config_file: "config/whisper_config.yaml"
+      enabled: true
+      timeout: 5.0
+      
+    llm_planner:
+      config_file: "config/llm_config.yaml"
+      enabled: true
+      timeout: 10.0
+      
+    vision_processor:
+      enabled: true
+      timeout: 5.0
+      fallback_enabled: true
+      
+    action_executor:
+      enabled: true
+      timeout: 30.0
+      safety_check: true
+      
+  # Performance settings
+  performance:
+    max_concurrent_requests: 5       # Maximum concurrent pipeline requests
+    response_timeout: 60.0           # Overall pipeline timeout
+    buffer_size: 1024               # Internal buffer size
+    memory_limit: "2GB"             # Maximum memory usage
+    
+  # Fusion settings for multi-modal integration
+  fusion:
+    voice_weight: 0.4               # Weight for voice input in decision making
+    vision_weight: 0.4              # Weight for vision input in decision making
+    context_weight: 0.2             # Weight for contextual information
+    confidence_threshold: 0.7       # Minimum confidence for action execution
+    
+  # Safety and validation
+  safety:
+    enable_validation: true         # Validate all pipeline outputs
+    enable_safety_check: true       # Perform safety checks before execution
+    emergency_stop: true            # Enable emergency stop functionality
+    action_approval_required: false # Require approval for actions
+    
+  # Observability settings
+  observability:
+    enable_tracing: true            # Enable pipeline execution tracing
+    enable_metrics: true            # Enable performance metrics
+    enable_logging: true            # Enable detailed logging
+    log_level: "INFO"               # Logging level
+    metrics_endpoint: "/vla_metrics" # Metrics endpoint path
+    
+  # Privacy compliance
+  privacy:
+    local_processing: true          # Ensure all processing is local
+    data_encryption: false          # Enable data encryption (if needed)
+    audit_logging: false            # Enable audit logging
+    data_retention_days: 7          # Days to retain temporary data

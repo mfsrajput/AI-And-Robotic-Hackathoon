@@ -1,0 +1,21 @@
+{
+  "id": "vla/capstone-autonomous-humanoid",
+  "title": "Chapter 4: Capstone: Autonomous Humanoid (Complete End-to-End System)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/04-vla/04-capstone-autonomous-humanoid.md",
+  "sourceDirName": "04-vla",
+  "slug": "/vla/capstone-autonomous-humanoid",
+  "permalink": "/vla/capstone-autonomous-humanoid",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/04-vla/04-capstone-autonomous-humanoid.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Multi-Modal Integration",
+    "permalink": "/vla/multi-modal-integration"
+  }
+}

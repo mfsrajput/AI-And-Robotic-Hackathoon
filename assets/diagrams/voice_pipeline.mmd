@@ -1,0 +1,37 @@
+graph TD
+    A[Audio Input] --> B[Preprocessing & Noise Reduction]
+    B --> C[Whisper Model Processing]
+    C --> D[Voice-to-Text Conversion]
+    D --> E[Command Validation]
+    E --> F{Command Valid?}
+    F -->|Yes| G[Parse Command Type]
+    F -->|No| H[Error Handling & Retry]
+    G --> I[Update VoiceCommand Status]
+    H --> I
+    I --> J{Command Type?}
+    J -->|Navigation| K[Navigation Handler]
+    J -->|Manipulation| L[Manipulation Handler]
+    J -->|Perception| M[Perception Handler]
+    J -->|Communication| N[Communication Handler]
+    K --> O[ROS Action Server - Navigation]
+    L --> P[ROS Action Server - Manipulation]
+    M --> Q[ROS Action Server - Perception]
+    N --> R[ROS Action Server - Communication]
+    O --> S[Robot Execution - Navigation]
+    P --> T[Robot Execution - Manipulation]
+    Q --> U[Robot Execution - Perception]
+    R --> V[Robot Execution - Communication]
+    S --> W[Feedback to User]
+    T --> W
+    U --> W
+    V --> W
+
+    style A fill:#e1f5fe
+    style W fill:#e8f5e8
+    style F fill:#fff3e0
+    style H fill:#ffebee
+
+<!--
+Voice Command Processing Pipeline - Mermaid Diagram
+Alt-text: Flowchart showing the voice command processing pipeline. Audio input flows through preprocessing, Whisper model processing, voice-to-text conversion, command validation, and then splits based on validity. Valid commands are parsed by command type (navigation, manipulation, perception, communication), status is updated, appropriate ROS action servers are triggered, robot behaviors executed, and feedback provided to the user. Invalid commands go through error handling and retry mechanisms.
+-->

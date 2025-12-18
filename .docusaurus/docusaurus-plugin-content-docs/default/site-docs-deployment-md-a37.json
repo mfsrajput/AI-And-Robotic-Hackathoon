@@ -1,0 +1,24 @@
+{
+  "id": "deployment",
+  "title": "Deployment Guide for GitHub Pages",
+  "description": "This guide provides step-by-step instructions for deploying the Docusaurus site to GitHub Pages.",
+  "source": "@site/docs/deployment.md",
+  "sourceDirName": ".",
+  "slug": "/deployment",
+  "permalink": "/deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/deployment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contributors",
+    "permalink": "/contributors"
+  },
+  "next": {
+    "title": "Getting Started with Physical AI & Humanoid Robotics Textbook",
+    "permalink": "/getting-started"
+  }
+}

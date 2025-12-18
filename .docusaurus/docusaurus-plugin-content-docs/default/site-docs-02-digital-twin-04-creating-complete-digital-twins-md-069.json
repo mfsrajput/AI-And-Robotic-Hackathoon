@@ -1,0 +1,28 @@
+{
+  "id": "digital-twin/creating-complete-digital-twins",
+  "title": "Creating Complete Digital Twins",
+  "description": "Learning Objectives",
+  "source": "@site/docs/02-digital-twin/04-creating-complete-digital-twins.md",
+  "sourceDirName": "02-digital-twin",
+  "slug": "/digital-twin/creating-complete-digital-twins",
+  "permalink": "/digital-twin/creating-complete-digital-twins",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/02-digital-twin/04-creating-complete-digital-twins.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Creating Complete Digital Twins"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Unity for High-Fidelity HRI",
+    "permalink": "/digital-twin/unity-for-high-fidelity-hri"
+  },
+  "next": {
+    "title": "Isaac Sim & Synthetic Data Generation",
+    "permalink": "/nvidia-isaac/isaac-sim-synthetic-data"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ros2/nodes-topics-services-actions",
+  "title": "Nodes, Topics, Services, and Actions",
+  "description": "Learning Objectives",
+  "source": "@site/docs/01-ros2/02-nodes-topics-services-actions.md",
+  "sourceDirName": "01-ros2",
+  "slug": "/ros2/nodes-topics-services-actions",
+  "permalink": "/ros2/nodes-topics-services-actions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/01-ros2/02-nodes-topics-services-actions.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Nodes, Topics, Services, and Actions"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "ROS 2 and Embodied Control",
+    "permalink": "/ros2/ros2-and-embodied-control"
+  },
+  "next": {
+    "title": "URDF + Xacro for Humanoids",
+    "permalink": "/ros2/urdf-xacro-for-humanoids"
+  }
+}

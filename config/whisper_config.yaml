@@ -1,0 +1,34 @@
+# Configuration for Whisper model integration using Whisper.cpp
+whisper:
+  # Model configuration
+  model_path: "models/whisper-tiny-q5_1.bin"  # Path to quantized Whisper model
+  model_type: "tiny"  # Model size: tiny, base, small, medium, large
+  quantized: true     # Whether to use quantized model for faster inference
+  
+  # Audio processing configuration
+  audio:
+    sample_rate: 16000      # Audio sample rate in Hz
+    channels: 1             # Number of audio channels
+    bit_depth: 16           # Audio bit depth
+    chunk_size: 1024        # Size of audio chunks for processing
+    
+  # Processing parameters
+  processing:
+    language: "en"          # Language code for speech recognition
+    translate: false        # Whether to translate to English
+    beam_size: 5            # Beam size for decoding
+    patience: 1.0           # Patience factor for beam search
+    suppress_tokens: "-1"   # Tokens to suppress during generation
+    
+  # Performance settings
+  performance:
+    threads: 4              # Number of threads for processing
+    max_tokens: 448         # Maximum tokens in context
+    offset: 0               # Start offset in audio (in ms)
+    duration: 0             # Audio duration to process (in ms)
+    
+  # Privacy compliance settings
+  privacy:
+    local_processing: true  # Ensure no external API calls
+    store_audio: false      # Whether to store audio recordings
+    store_transcripts: false # Whether to store transcripts permanently

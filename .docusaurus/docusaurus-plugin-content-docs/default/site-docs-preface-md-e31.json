@@ -1,0 +1,24 @@
+{
+  "id": "preface",
+  "title": "Preface",
+  "description": "The field of robotics has experienced unprecedented growth in recent years, with humanoid robots representing one of the most ambitious frontiers in artificial intelligence and engineering. \"Physical AI & Humanoid Robotics\" is designed to bridge the gap between theoretical knowledge and practical implementation, providing students and professionals with the comprehensive understanding needed to develop intelligent humanoid systems.",
+  "source": "@site/docs/preface.md",
+  "sourceDirName": ".",
+  "slug": "/preface",
+  "permalink": "/preface",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/preface.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Local Verification Checklist for Physical AI & Humanoid Robotics Textbook Site",
+    "permalink": "/local-verification-checklist"
+  },
+  "next": {
+    "title": "Troubleshooting Guide for Physical AI & Humanoid Robotics Textbook Site",
+    "permalink": "/troubleshooting"
+  }
+}

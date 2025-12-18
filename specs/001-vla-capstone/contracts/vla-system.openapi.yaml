@@ -1,0 +1,482 @@
+openapi: 3.0.3
+info:
+  title: Vision-Language-Action (VLA) System API
+  description: API for the Vision-Language-Action system in the Physical AI & Humanoid Robotics textbook
+  version: 1.0.0
+  contact:
+    name: VLA System Team
+    email: vla-team@textbook.edu
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+  - url: https://vla-api.textbook.edu
+    description: Production server
+
+paths:
+  /api/v1/voice/process:
+    post:
+      summary: Process voice input and convert to text
+      description: Accepts audio data and returns transcribed text using local Whisper model
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - audio
+              properties:
+                audio:
+                  type: string
+                  format: binary
+                  description: Audio file to be processed
+                model:
+                  type: string
+                  default: "tiny"
+                  description: Whisper model to use for processing
+      responses:
+        '200':
+          description: Successfully processed audio
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VoiceProcessingResponse'
+        '400':
+          description: Invalid audio format or processing error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/v1/llm/plan-task:
+    post:
+      summary: Generate action plan from natural language command
+      description: Converts natural language command to sequence of ROS actions using local LLM
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskPlanningRequest'
+      responses:
+        '200':
+          description: Successfully generated action plan
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskPlanningResponse'
+        '400':
+          description: Invalid command format or processing error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/v1/multimodal/integrate:
+    post:
+      summary: Integrate vision and language inputs
+      description: Combines visual perception data with language understanding for multi-modal processing
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MultiModalIntegrationRequest'
+      responses:
+        '200':
+          description: Successfully integrated multi-modal inputs
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MultiModalIntegrationResponse'
+        '400':
+          description: Invalid input format or processing error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/v1/capstone/execute:
+    post:
+      summary: Execute complete capstone autonomous humanoid task
+      description: Executes a complete task using integrated VLA system components
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CapstoneExecutionRequest'
+      responses:
+        '200':
+          description: Successfully executed capstone task
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapstoneExecutionResponse'
+        '400':
+          description: Invalid task specification or execution error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /api/v1/status:
+    get:
+      summary: Get system status
+      description: Returns the current status of the VLA system
+      responses:
+        '200':
+          description: System status information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+
+components:
+  schemas:
+    VoiceProcessingResponse:
+      type: object
+      required:
+        - id
+        - transcript
+        - confidence
+        - timestamp
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the processed voice command
+        transcript:
+          type: string
+          description: The transcribed text from the audio
+        confidence:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.0
+          description: Confidence score of the transcription
+        timestamp:
+          type: string
+          format: date-time
+          description: When the processing was completed
+
+    TaskPlanningRequest:
+      type: object
+      required:
+        - command
+        - context
+      properties:
+        command:
+          type: string
+          description: Natural language command to be processed
+        context:
+          type: object
+          description: Environmental context for the command
+          properties:
+            robot_position:
+              type: array
+              items:
+                type: number
+                format: float
+              minItems: 3
+              maxItems: 3
+              description: Current robot position [x, y, z]
+            environment_objects:
+              type: array
+              items:
+                $ref: '#/components/schemas/EnvironmentObject'
+            available_actions:
+              type: array
+              items:
+                type: string
+              description: List of available robot actions
+
+    TaskPlanningResponse:
+      type: object
+      required:
+        - id
+        - action_sequence
+        - reasoning
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the action sequence
+        action_sequence:
+          type: array
+          items:
+            $ref: '#/components/schemas/ActionCommand'
+          description: Sequence of actions to execute
+        reasoning:
+          type: string
+          description: Explanation of how the plan was derived
+
+    MultiModalIntegrationRequest:
+      type: object
+      required:
+        - voice_input
+        - visual_input
+      properties:
+        voice_input:
+          type: string
+          description: Voice command text
+        visual_input:
+          type: object
+          description: Visual perception data
+          properties:
+            detected_objects:
+              type: array
+              items:
+                $ref: '#/components/schemas/PerceivedObject'
+            scene_description:
+              type: string
+              description: Text description of the visual scene
+            spatial_relationships:
+              type: array
+              items:
+                type: string
+              description: Spatial relationships between objects
+
+    MultiModalIntegrationResponse:
+      type: object
+      required:
+        - integrated_understanding
+        - action_recommendation
+      properties:
+        integrated_understanding:
+          type: string
+          description: Combined understanding from voice and vision inputs
+        action_recommendation:
+          type: string
+          description: Recommended action based on multi-modal input
+        confidence:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.0
+          description: Confidence in the integrated understanding
+
+    CapstoneExecutionRequest:
+      type: object
+      required:
+        - task_description
+        - parameters
+      properties:
+        task_description:
+          type: string
+          description: High-level description of the capstone task
+        parameters:
+          type: object
+          description: Execution parameters for the task
+          additionalProperties: true
+
+    CapstoneExecutionResponse:
+      type: object
+      required:
+        - execution_id
+        - status
+        - steps
+      properties:
+        execution_id:
+          type: string
+          description: Unique identifier for the execution
+        status:
+          type: string
+          enum: [pending, executing, completed, failed]
+          description: Current execution status
+        steps:
+          type: array
+          items:
+            $ref: '#/components/schemas/ExecutionStep'
+          description: Detailed execution steps
+        metrics:
+          type: object
+          description: Performance metrics for the execution
+
+    ActionCommand:
+      type: object
+      required:
+        - action_type
+        - parameters
+      properties:
+        action_type:
+          type: string
+          enum: [navigation, manipulation, perception, communication]
+          description: Type of action to perform
+        parameters:
+          type: object
+          description: Parameters for the action
+          additionalProperties: true
+        priority:
+          type: integer
+          description: Execution priority (lower number = higher priority)
+
+    EnvironmentObject:
+      type: object
+      required:
+        - name
+        - position
+      properties:
+        name:
+          type: string
+          description: Name of the object
+        position:
+          type: array
+          items:
+            type: number
+            format: float
+          minItems: 3
+          maxItems: 3
+          description: Position of the object [x, y, z]
+        properties:
+          type: object
+          description: Additional properties of the object
+          additionalProperties: true
+
+    PerceivedObject:
+      type: object
+      required:
+        - label
+        - confidence
+        - bounding_box
+      properties:
+        label:
+          type: string
+          description: Classification label of the object
+        confidence:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.0
+          description: Confidence of the detection
+        bounding_box:
+          type: array
+          items:
+            type: number
+            format: float
+          minItems: 4
+          maxItems: 4
+          description: Bounding box coordinates [x, y, width, height]
+
+    ExecutionStep:
+      type: object
+      required:
+        - step_number
+        - description
+        - status
+      properties:
+        step_number:
+          type: integer
+          description: Sequential number of the step
+        description:
+          type: string
+          description: Description of the step
+        status:
+          type: string
+          enum: [pending, executing, completed, failed]
+          description: Status of the step
+        details:
+          type: object
+          description: Additional details about the step execution
+          additionalProperties: true
+
+    ErrorResponse:
+      type: object
+      required:
+        - error_code
+        - message
+      properties:
+        error_code:
+          type: string
+          description: Machine-readable error code
+        message:
+          type: string
+          description: Human-readable error message
+        details:
+          type: object
+          description: Additional error details
+          additionalProperties: true
+        timestamp:
+          type: string
+          format: date-time
+          description: When the error occurred
+
+    StatusResponse:
+      type: object
+      required:
+        - status
+        - components
+      properties:
+        status:
+          type: string
+          enum: [healthy, degraded, unavailable]
+          description: Overall system status
+        components:
+          type: object
+          description: Status of individual components
+          properties:
+            voice_processor:
+              type: string
+              enum: [healthy, degraded, unavailable]
+            llm_processor:
+              type: string
+              enum: [healthy, degraded, unavailable]
+            vision_processor:
+              type: string
+              enum: [healthy, degraded, unavailable]
+            action_executor:
+              type: string
+              enum: [healthy, degraded, unavailable]
+        timestamp:
+          type: string
+          format: date-time
+          description: When the status was checked
+
+tags:
+  - name: voice
+    description: Voice processing endpoints
+  - name: llm
+    description: LLM-based task planning endpoints
+  - name: multimodal
+    description: Multi-modal integration endpoints
+  - name: capstone
+    description: Capstone project execution endpoints
+  - name: status
+    description: System status endpoints
+
+security:
+  - bearerAuth: []
+  - apiKey: []
+
+securityDefinitions:
+  bearerAuth:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+  apiKey:
+    type: apiKey
+    in: header
+    name: X-API-Key

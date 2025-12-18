@@ -1,0 +1,28 @@
+{
+  "id": "ros2/python-rclpy-bridge",
+  "title": "Python rclpy Bridge to Controllers",
+  "description": "Learning Objectives",
+  "source": "@site/docs/01-ros2/04-python-rclpy-bridge.md",
+  "sourceDirName": "01-ros2",
+  "slug": "/ros2/python-rclpy-bridge",
+  "permalink": "/ros2/python-rclpy-bridge",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/01-ros2/04-python-rclpy-bridge.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Python rclpy Bridge to Controllers"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "URDF + Xacro for Humanoids",
+    "permalink": "/ros2/urdf-xacro-for-humanoids"
+  },
+  "next": {
+    "title": "Gazebo Physics & World Building",
+    "permalink": "/digital-twin/gazebo-physics-and-world-building"
+  }
+}

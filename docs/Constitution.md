@@ -1,3 +1,7 @@
+---
+title: Constitution of the Physical AI & Humanoid Robotics Textbook
+---
+
 # Constitution of the Physical AI & Humanoid Robotics Textbook
 
 ## Preamble
