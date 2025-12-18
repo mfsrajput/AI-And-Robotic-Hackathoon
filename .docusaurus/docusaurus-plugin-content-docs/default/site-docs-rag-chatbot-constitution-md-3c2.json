@@ -1,0 +1,26 @@
+{
+  "id": "RAG-Chatbot-Constitution",
+  "title": "Constitution of the Integrated RAG Chatbot",
+  "description": "Preamble",
+  "source": "@site/docs/RAG-Chatbot-Constitution.md",
+  "sourceDirName": ".",
+  "slug": "/RAG-Chatbot-Constitution",
+  "permalink": "/RAG-Chatbot-Constitution",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/RAG-Chatbot-Constitution.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Constitution of the Integrated RAG Chatbot"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Constitution of the Physical AI & Humanoid Robotics Textbook",
+    "permalink": "/Constitution"
+  },
+  "next": {
+    "title": "Contributors",
+    "permalink": "/contributors"
+  }
+}

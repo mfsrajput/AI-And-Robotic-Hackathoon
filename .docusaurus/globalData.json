@@ -1,0 +1,184 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "Chatbot",
+              "path": "/Chatbot",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Constitution",
+              "path": "/Constitution",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "contributors",
+              "path": "/contributors",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "deployment",
+              "path": "/deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "digital-twin/creating-complete-digital-twins",
+              "path": "/digital-twin/creating-complete-digital-twins",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "digital-twin/gazebo-physics-and-world-building",
+              "path": "/digital-twin/gazebo-physics-and-world-building",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "digital-twin/simulating-sensors-lidar-imu-depth",
+              "path": "/digital-twin/simulating-sensors-lidar-imu-depth",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "digital-twin/unity-for-high-fidelity-hri",
+              "path": "/digital-twin/unity-for-high-fidelity-hri",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "getting-started",
+              "path": "/getting-started",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "local-verification-checklist",
+              "path": "/local-verification-checklist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "nvidia-isaac/isaac-ros-vslam-perception",
+              "path": "/nvidia-isaac/isaac-ros-vslam-perception",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "nvidia-isaac/isaac-sim-synthetic-data",
+              "path": "/nvidia-isaac/isaac-sim-synthetic-data",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "nvidia-isaac/nav2-bipedal-locomotion",
+              "path": "/nvidia-isaac/nav2-bipedal-locomotion",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "nvidia-isaac/sim-to-real-transfer",
+              "path": "/nvidia-isaac/sim-to-real-transfer",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "preface",
+              "path": "/preface",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "RAG-Chatbot-Constitution",
+              "path": "/RAG-Chatbot-Constitution",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ros2/nodes-topics-services-actions",
+              "path": "/ros2/nodes-topics-services-actions",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "ros2/python-rclpy-bridge",
+              "path": "/ros2/python-rclpy-bridge",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "ros2/ros2-and-embodied-control",
+              "path": "/ros2/ros2-and-embodied-control",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "ros2/urdf-xacro-for-humanoids",
+              "path": "/ros2/urdf-xacro-for-humanoids",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/troubleshooting",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "vla/capstone-autonomous-humanoid",
+              "path": "/vla/capstone-autonomous-humanoid",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "vla/llm-task-and-motion-planning",
+              "path": "/vla/llm-task-and-motion-planning",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "vla/multi-modal-integration",
+              "path": "/vla/multi-modal-integration",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "vla/voice-to-action-with-whisper",
+              "path": "/vla/voice-to-action-with-whisper",
+              "sidebar": "moduleSidebar"
+            },
+            {
+              "id": "/category/module-1-the-robotic-nervous-system-ros-2",
+              "path": "/category/module-1-the-robotic-nervous-system-ros-2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-2-the-digital-twin-gazebo--unity",
+              "path": "/category/module-2-the-digital-twin-gazebo--unity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-3-the-ai-robot-brain-nvidia-isaac",
+              "path": "/category/module-3-the-ai-robot-brain-nvidia-isaac",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/module-4-vision-language-action-vla--capstone",
+              "path": "/category/module-4-vision-language-action-vla--capstone",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/intro",
+                "label": "intro"
+              }
+            },
+            "moduleSidebar": {
+              "link": {
+                "path": "/ros2/ros2-and-embodied-control",
+                "label": "ros2/ros2-and-embodied-control"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "Constitution",
+  "title": "Constitution of the Physical AI & Humanoid Robotics Textbook",
+  "description": "Preamble",
+  "source": "@site/docs/Constitution.md",
+  "sourceDirName": ".",
+  "slug": "/Constitution",
+  "permalink": "/Constitution",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/Constitution.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Constitution of the Physical AI & Humanoid Robotics Textbook"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI Assistant",
+    "permalink": "/Chatbot"
+  },
+  "next": {
+    "title": "Constitution of the Integrated RAG Chatbot",
+    "permalink": "/RAG-Chatbot-Constitution"
+  }
+}

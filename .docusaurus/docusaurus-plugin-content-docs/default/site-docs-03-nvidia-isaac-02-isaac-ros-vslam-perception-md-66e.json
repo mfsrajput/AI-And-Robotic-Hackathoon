@@ -1,0 +1,28 @@
+{
+  "id": "nvidia-isaac/isaac-ros-vslam-perception",
+  "title": "Isaac ROS + Hardware-Accelerated VSLAM",
+  "description": "Learning Objectives",
+  "source": "@site/docs/03-nvidia-isaac/02-isaac-ros-vslam-perception.md",
+  "sourceDirName": "03-nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-ros-vslam-perception",
+  "permalink": "/nvidia-isaac/isaac-ros-vslam-perception",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/03-nvidia-isaac/02-isaac-ros-vslam-perception.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Isaac ROS + Hardware-Accelerated VSLAM"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Isaac Sim & Synthetic Data Generation",
+    "permalink": "/nvidia-isaac/isaac-sim-synthetic-data"
+  },
+  "next": {
+    "title": "Nav2 for Bipedal Humanoids",
+    "permalink": "/nvidia-isaac/nav2-bipedal-locomotion"
+  }
+}

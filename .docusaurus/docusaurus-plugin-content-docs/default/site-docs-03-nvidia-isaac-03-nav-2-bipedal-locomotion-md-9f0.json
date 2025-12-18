@@ -1,0 +1,28 @@
+{
+  "id": "nvidia-isaac/nav2-bipedal-locomotion",
+  "title": "Nav2 for Bipedal Humanoids",
+  "description": "Learning Objectives",
+  "source": "@site/docs/03-nvidia-isaac/03-nav2-bipedal-locomotion.md",
+  "sourceDirName": "03-nvidia-isaac",
+  "slug": "/nvidia-isaac/nav2-bipedal-locomotion",
+  "permalink": "/nvidia-isaac/nav2-bipedal-locomotion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/03-nvidia-isaac/03-nav2-bipedal-locomotion.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Nav2 for Bipedal Humanoids"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Isaac ROS + Hardware-Accelerated VSLAM",
+    "permalink": "/nvidia-isaac/isaac-ros-vslam-perception"
+  },
+  "next": {
+    "title": "Sim-to-Real Transfer Techniques",
+    "permalink": "/nvidia-isaac/sim-to-real-transfer"
+  }
+}

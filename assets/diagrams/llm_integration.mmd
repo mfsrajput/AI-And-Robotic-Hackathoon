@@ -1,0 +1,31 @@
+graph TD
+    A[Natural Language Command] --> B[LLM Service]
+    B --> C[Command Analysis]
+    C --> D[Context Integration]
+    D --> E[Action Sequence Generation]
+    E --> F[ROS Action Mapping]
+    F --> G[Action Execution]
+
+    H[Environmental Context] --> D
+    I[Robot Capabilities] --> D
+    J[Sensor Data] --> D
+
+    E --> K[Action Validation]
+    K --> L{Validation Result}
+    L -->|Valid| G
+    L -->|Invalid| M[Error Recovery]
+    M --> B
+
+    N[Ollama/Llama Model] -.-> B
+    O[Prompt Templates] -.-> B
+
+    G --> P[Navigation Actions]
+    G --> Q[Manipulation Actions]
+    G --> R[Perception Actions]
+
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style E fill:#e8f5e8
+    style G fill:#fff3e0
+    style N fill:#fce4ec
+    style O fill:#fff9c4

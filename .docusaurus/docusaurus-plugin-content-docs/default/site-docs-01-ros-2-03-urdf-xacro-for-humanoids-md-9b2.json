@@ -1,0 +1,28 @@
+{
+  "id": "ros2/urdf-xacro-for-humanoids",
+  "title": "URDF + Xacro for Humanoids",
+  "description": "Learning Objectives",
+  "source": "@site/docs/01-ros2/03-urdf-xacro-for-humanoids.md",
+  "sourceDirName": "01-ros2",
+  "slug": "/ros2/urdf-xacro-for-humanoids",
+  "permalink": "/ros2/urdf-xacro-for-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/01-ros2/03-urdf-xacro-for-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "URDF + Xacro for Humanoids"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Nodes, Topics, Services, and Actions",
+    "permalink": "/ros2/nodes-topics-services-actions"
+  },
+  "next": {
+    "title": "Python rclpy Bridge to Controllers",
+    "permalink": "/ros2/python-rclpy-bridge"
+  }
+}

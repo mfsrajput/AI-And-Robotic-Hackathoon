@@ -1,0 +1,28 @@
+{
+  "id": "nvidia-isaac/sim-to-real-transfer",
+  "title": "Sim-to-Real Transfer Techniques",
+  "description": "Learning Objectives",
+  "source": "@site/docs/03-nvidia-isaac/04-sim-to-real-transfer.md",
+  "sourceDirName": "03-nvidia-isaac",
+  "slug": "/nvidia-isaac/sim-to-real-transfer",
+  "permalink": "/nvidia-isaac/sim-to-real-transfer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/03-nvidia-isaac/04-sim-to-real-transfer.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Sim-to-Real Transfer Techniques"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Nav2 for Bipedal Humanoids",
+    "permalink": "/nvidia-isaac/nav2-bipedal-locomotion"
+  },
+  "next": {
+    "title": "Chapter 1: Voice-to-Action using OpenAI Whisper (Local Implementation)",
+    "permalink": "/vla/voice-to-action-with-whisper"
+  }
+}

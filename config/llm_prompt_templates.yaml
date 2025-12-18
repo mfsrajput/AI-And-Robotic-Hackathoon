@@ -1,0 +1,216 @@
+# LLM Prompt Templates for VLA System
+# Configuration file for reusable prompt templates for robotics task planning
+# Per FR-006: System MUST provide LLM prompt templates for task and motion planning
+
+# Navigation Task Planning Template
+navigation_task_planning:
+  template: |
+    You are an expert robotics task planner. Given the following command and context, generate a navigation plan.
+
+    Command: {command}
+    Context: {context}
+    Robot Capabilities: {capabilities}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "action": "navigate_to",
+      "parameters": {{
+        "target_location": "...",
+        "navigation_mode": "..."
+      }},
+      "description": "..."
+    }}
+
+    Ensure the navigation plan is safe and executable.
+  parameters:
+    - command
+    - context
+    - capabilities
+  category: "navigation"
+  examples:
+    - "Go to the kitchen"
+    - "Navigate to the blue box"
+    - "Move to the table"
+
+# Manipulation Task Planning Template
+manipulation_task_planning:
+  template: |
+    You are an expert robotics task planner. Given the following command and context, generate a manipulation plan.
+
+    Command: {command}
+    Context: {context}
+    Robot Capabilities: {capabilities}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "action": "manipulate_object",
+      "parameters": {{
+        "object_type": "...",
+        "manipulation_type": "...",
+        "target_position": {{...}}
+      }},
+      "description": "..."
+    }}
+
+    Ensure the manipulation plan is safe and executable.
+  parameters:
+    - command
+    - context
+    - capabilities
+  category: "manipulation"
+  examples:
+    - "Pick up the red cup"
+    - "Grasp the blue box"
+    - "Move the object to the left"
+
+# Perception Task Planning Template
+perception_task_planning:
+  template: |
+    You are an expert robotics task planner. Given the following command and context, generate a perception plan.
+
+    Command: {command}
+    Context: {context}
+    Robot Capabilities: {capabilities}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "action": "detect_object",
+      "parameters": {{
+        "object_type": "...",
+        "search_area": "...",
+        "confidence_threshold": 0.8
+      }},
+      "description": "..."
+    }}
+
+    Ensure the perception plan is appropriate for the given command.
+  parameters:
+    - command
+    - context
+    - capabilities
+  category: "perception"
+  examples:
+    - "Find the red ball"
+    - "Detect the blue box"
+    - "Locate the cup on the table"
+
+# Multi-Modal Fusion Template
+multi_modal_fusion:
+  template: |
+    You are an expert in multi-modal fusion for robotics. Combine the visual input and language command to guide robot behavior.
+
+    Visual Input: {visual_description}
+    Language Command: {command}
+    Context: {context}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "fused_action": "...",
+      "parameters": {{
+        "target_object": "...",
+        "action_type": "...",
+        "confidence": 0.0
+      }},
+      "reasoning": "..."
+    }}
+
+    Ensure the fused action makes sense given both inputs.
+  parameters:
+    - visual_description
+    - command
+    - context
+  category: "multi-modal"
+  examples:
+    - "Go to the blue box" with visual scene containing blue boxes
+    - "Pick up the object on the left" with visual scene showing objects
+
+# General Task Planning Template
+general_task_planning:
+  template: |
+    You are an expert robotics task planner. Convert the natural language command to a sequence of ROS 2 actions.
+
+    Command: {command}
+    Context: {context}
+    Robot Capabilities: {capabilities}
+    Environmental Constraints: {environmental_constraints}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "action_sequence": [
+        {{
+          "action": "...",
+          "parameters": {{...}},
+          "description": "..."
+        }}
+      ],
+      "estimated_duration": 0.0,
+      "confidence": 0.0
+    }}
+
+    The action sequence should be safe, executable, and appropriate for the given command.
+  parameters:
+    - command
+    - context
+    - capabilities
+    - environmental_constraints
+  category: "general"
+  examples:
+    - "Go to the kitchen and pick up the red cup"
+    - "Navigate to the living room and wait there"
+    - "Find the blue box and report its location"
+
+# Error Handling Template
+error_recovery:
+  template: |
+    You are an expert in robotics error handling. Given the error situation, suggest a recovery plan.
+
+    Error Situation: {error_description}
+    Current State: {current_state}
+    Available Actions: {available_actions}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "recovery_action": "...",
+      "parameters": {{...}},
+      "alternative_plan": [...],
+      "safety_checks": [...]
+    }}
+
+    Ensure the recovery plan is safe and appropriate for the error situation.
+  parameters:
+    - error_description
+    - current_state
+    - available_actions
+  category: "error-handling"
+  examples:
+    - "Navigation failed due to obstacle"
+    - "Object detection failed"
+    - "Grasp attempt unsuccessful"
+
+# Safety Validation Template
+safety_validation:
+  template: |
+    You are a safety validator for robotics action sequences. Validate the following action sequence for safety.
+
+    Action Sequence: {action_sequence}
+    Environmental Context: {environment_context}
+    Safety Constraints: {safety_constraints}
+
+    Provide your response in JSON format with the following structure:
+    {{
+      "is_safe": true/false,
+      "safety_violations": [...],
+      "risk_assessment": "...",
+      "recommendations": [...]
+    }}
+
+    Ensure all safety constraints are met before execution.
+  parameters:
+    - action_sequence
+    - environment_context
+    - safety_constraints
+  category: "safety"
+  examples:
+    - "Validate navigation path for collisions"
+    - "Check manipulation forces are within limits"
+    - "Verify action sequence is safe for humans nearby"

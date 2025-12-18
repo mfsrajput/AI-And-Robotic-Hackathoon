@@ -1,0 +1,25 @@
+{
+  "id": "vla/llm-task-and-motion-planning",
+  "title": "Chapter 2: LLM Task & Motion Planning (Natural Language → ROS Actions)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/04-vla/02-llm-task-and-motion-planning.md",
+  "sourceDirName": "04-vla",
+  "slug": "/vla/llm-task-and-motion-planning",
+  "permalink": "/vla/llm-task-and-motion-planning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/04-vla/02-llm-task-and-motion-planning.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Chapter 1: Voice-to-Action using OpenAI Whisper (Local Implementation)",
+    "permalink": "/vla/voice-to-action-with-whisper"
+  },
+  "next": {
+    "title": "Multi-Modal Integration",
+    "permalink": "/vla/multi-modal-integration"
+  }
+}

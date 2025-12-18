@@ -1,0 +1,148 @@
+# LLM Configuration for VLA Task Planning System
+# Configuration file for the Vision-Language-Action (VLA) pipeline LLM integration
+# Part of the autonomous humanoid system
+
+llm_task_planning:
+  # LLM Model Configuration
+  model_name: "llama3.1:8b"  # Default model for task planning
+  enable_local_llm: true     # Use local LLM (no external API calls)
+  temperature: 0.3          # Creativity of responses (0.0 to 1.0)
+  max_tokens: 2048          # Maximum tokens in response
+  response_timeout: 30.0    # Timeout for LLM responses (seconds)
+  retry_attempts: 3         # Number of retry attempts for failed requests
+
+  # Privacy and Security
+  privacy_compliance: true  # Ensure no external data transmission
+  enable_caching: true      # Cache responses to reduce redundant calls
+  cache_duration: 300       # Cache duration in seconds (5 minutes)
+  data_retention_days: 7    # Days to retain logs and temporary data
+
+  # Performance Settings
+  max_concurrent_requests: 5  # Maximum concurrent LLM requests
+  request_queue_size: 10      # Size of request processing queue
+  enable_batch_processing: false  # Process requests in batches
+
+  # Prompt Engineering Settings
+  prompt_engineering:
+    enable_dynamic_prompts: true
+    default_temperature: 0.3
+    enable_context_awareness: true
+    context_history_size: 10
+    enable_prompt_optimization: true
+    max_context_length: 4096  # Maximum context length for LLM
+
+  # Action Sequence Generation
+  action_sequence:
+    default_timeout: 300.0      # Default timeout for action sequences (seconds)
+    max_sequence_steps: 50      # Maximum steps in a single sequence
+    enable_validation: true     # Validate action sequences before execution
+    validation_timeout: 10.0    # Timeout for validation process
+    enable_optimization: true   # Optimize action sequences for efficiency
+    success_threshold: 0.95     # Minimum success probability for sequences
+
+  # Safety and Validation
+  safety:
+    enable_safety_checking: true
+    safety_timeout: 5.0
+    max_force_threshold: 50.0   # Maximum force allowed (Newtons)
+    max_speed_threshold: 1.0    # Maximum speed allowed (m/s)
+    enable_collision_checking: true
+    collision_checking_range: 2.0  # Range for collision detection (meters)
+    emergency_stop_enabled: true
+
+  # Command Processing
+  command_processing:
+    command_timeout: 60.0
+    max_command_history: 100
+    enable_nlu: true            # Enable Natural Language Understanding
+    nlu_model_path: "models/nlu_model.pkl"
+    enable_intent_classification: true
+    intent_confidence_threshold: 0.7
+    enable_entity_extraction: true
+    entity_confidence_threshold: 0.6
+
+  # Response Parsing
+  response_parsing:
+    enable_json_validation: true
+    enable_safety_checking: true
+    parsing_timeout: 5.0
+    enable_response_sanitization: true
+    max_response_size: 10240    # Maximum response size in bytes
+
+  # System Monitoring
+  monitoring:
+    enable_metrics_collection: true
+    metrics_collection_interval: 10  # seconds
+    enable_performance_monitoring: true
+    enable_error_tracking: true
+    log_level_threshold: "INFO"
+    enable_anomaly_detection: false
+
+  # Error Handling and Recovery
+  error_handling:
+    enable_error_recovery: true
+    max_recovery_attempts: 3
+    enable_fallback_responses: true
+    fallback_response_timeout: 5.0
+
+  # Communication Settings
+  communication:
+    ros2_interface:
+      action_servers:
+        plan_task:
+          timeout: 300.0
+          feedback_rate: 1.0    # Hz
+        execute_action_sequence:
+          timeout: 600.0
+          feedback_rate: 2.0    # Hz
+      topics:
+        command_input_queue_size: 10
+        response_output_queue_size: 10
+
+# System-wide settings that apply to all components
+system:
+  # Execution settings
+  execution:
+    max_execution_time: 1800.0    # Maximum time for any single execution (30 minutes)
+    default_priority: 3           # Default priority level (1-5)
+    enable_parallel_execution: true
+    max_parallel_executions: 3
+
+  # Resource management
+  resources:
+    memory_limit_mb: 2048         # Memory limit for the system (MB)
+    cpu_limit_percentage: 80      # CPU usage limit (%)
+    enable_resource_monitoring: true
+
+  # Logging and observability
+  logging:
+    enable_detailed_logging: true
+    log_rotation_size_mb: 100     # Size at which to rotate logs
+    log_retention_days: 30        # Days to keep logs
+    enable_educational_logging: true  # Include educational information in logs
+
+# Environment-specific overrides can be added here
+# For example, development, testing, or production environments
+environments:
+  development:
+    model_name: "llama3.1:8b"
+    temperature: 0.5
+    enable_caching: false
+    log_level_threshold: "DEBUG"
+    privacy_compliance: false  # For testing purposes only
+
+  testing:
+    model_name: "llama3.1:8b"
+    temperature: 0.3
+    enable_caching: true
+    privacy_compliance: true
+    enable_anomaly_detection: true
+
+  production:
+    model_name: "llama3.1:8b"
+    temperature: 0.2
+    enable_caching: true
+    privacy_compliance: true
+    max_concurrent_requests: 3
+    enable_anomaly_detection: true
+    log_level_threshold: "WARN"

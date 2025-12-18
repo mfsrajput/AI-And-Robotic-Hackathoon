@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.coverage
+.cache
+.pytest_cache/
+.hypothesis/
+profile_default/
+ipython_config.py
+
+# Virtual environments
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.venv
+.env
+env/
+
+# ROS 2
+*.log
+*.log.*
+log/
+.develenv.*
+.install/
+.build/
+opt/
+share/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Documentation
+.history/
+.history/**
+_site/
+
+# Environment variables
+.env*
+.env.local
+.env.dev
+.env.production
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*:*
+Icon?
+VolumeIcon.icns
+
+# Build outputs
+/dist
+/out
+/build
+/target
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Whisper.cpp specific
+whisper.cpp/models/
+ggml-*.bin
+models/
+.bin

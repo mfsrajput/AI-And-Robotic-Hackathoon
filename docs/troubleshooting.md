@@ -235,7 +235,7 @@ If you encounter issues, try these verification steps:
 
 ## MDX Syntax Issues
 
-### Fixing MDX errors for < > symbols
+### Fixing MDX errors for `<` `>` symbols
 
 **Problem:** MDX v3 compilation errors occur when unescaped `<` and `>` characters appear in plain text (e.g., comparisons like "< 2" being misinterpreted as invalid JSX).
 
@@ -249,9 +249,9 @@ If you encounter issues, try these verification steps:
    ```
 
 2. Common patterns to fix:
-   - `latency < 2s` → `latency `< 2` s`
-   - `error rate <= 5%` → `error rate `<code>&lt;=</code> 5%`
-   - `threshold > 10` → `threshold `> 10``
+   - `latency < 2s` → `latency &lt; 2s`
+   - `error rate <= 5%` → `error rate &lt;= 5%`
+   - `threshold > 10` → `threshold &gt; 10`
 
 3. For single symbols that need escaping, you can also use HTML entities:
    - `<` → `&lt;`
@@ -262,6 +262,10 @@ If you encounter issues, try these verification steps:
 - Part of JSX/HTML elements
 - Within inline code spans (`<code>`)
 - Inside Mermaid diagrams
+
+### Displaying literal < > in MDX content
+
+To display literal < > in MDX content, use `&lt;` and `&gt;` or inline code ` < > `
 
 ## Landing Page Issues
 

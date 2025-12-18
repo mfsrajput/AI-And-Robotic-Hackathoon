@@ -1,0 +1,69 @@
+graph TB
+    subgraph "Input Modalities"
+        A[Voice Input]
+        B[Visual Input]
+        C[Tactile Input]
+    end
+
+    subgraph "Processing Modules"
+        D[Whisper - Speech Recognition]
+        E[Visual Perception Engine]
+        F[Tactile Processing]
+        G[Multi-Modal Fusion]
+    end
+
+    subgraph "AI Planning"
+        H[LLM Task Planner]
+        I[Prompt Engineering]
+        J[Action Sequence Generator]
+    end
+
+    subgraph "ROS Execution"
+        K[Navigation Actions]
+        L[Manipulation Actions]
+        M[Perception Actions]
+        N[Communication Actions]
+    end
+
+    subgraph "Integration Layer"
+        O[VLA Pipeline Orchestrator]
+        P[State Management]
+        Q[Safety Validator]
+    end
+
+    subgraph "Previous Modules Integration"
+        R[ROS 2 Interfaces]
+        S[Digital Twin Connection]
+        T[Isaac Sim Connection]
+    end
+
+    A --> D
+    B --> E
+    C --> F
+    D --> G
+    E --> G
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> O
+    O --> K
+    O --> L
+    O --> M
+    O --> N
+    K --> P
+    L --> P
+    M --> P
+    N --> P
+    P --> Q
+    Q --> R
+    Q --> S
+    Q --> T
+
+    style A fill:#e1f5fe
+    style D fill:#f3e5f5
+    style G fill:#e8f5e8
+    style H fill:#fff3e0
+    style J fill:#fce4ec
+    style O fill:#fff9c4
+    style Q fill:#e0f7fa

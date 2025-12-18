@@ -1,0 +1,24 @@
+{
+  "id": "ros2/ros2-and-embodied-control",
+  "title": "ROS 2 and Embodied Control",
+  "description": "Learning Objectives",
+  "source": "@site/docs/01-ros2/01-ros2-and-embodied-control.md",
+  "sourceDirName": "01-ros2",
+  "slug": "/ros2/ros2-and-embodied-control",
+  "permalink": "/ros2/ros2-and-embodied-control",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/01-ros2/01-ros2-and-embodied-control.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "ROS 2 and Embodied Control"
+  },
+  "sidebar": "moduleSidebar",
+  "next": {
+    "title": "Nodes, Topics, Services, and Actions",
+    "permalink": "/ros2/nodes-topics-services-actions"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "digital-twin/gazebo-physics-and-world-building",
+  "title": "Gazebo Physics & World Building",
+  "description": "Learning Objectives",
+  "source": "@site/docs/02-digital-twin/01-gazebo-physics-and-world-building.md",
+  "sourceDirName": "02-digital-twin",
+  "slug": "/digital-twin/gazebo-physics-and-world-building",
+  "permalink": "/digital-twin/gazebo-physics-and-world-building",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/02-digital-twin/01-gazebo-physics-and-world-building.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Gazebo Physics & World Building"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Python rclpy Bridge to Controllers",
+    "permalink": "/ros2/python-rclpy-bridge"
+  },
+  "next": {
+    "title": "Sensor Simulation (LiDAR, Depth, IMU)",
+    "permalink": "/digital-twin/simulating-sensors-lidar-imu-depth"
+  }
+}

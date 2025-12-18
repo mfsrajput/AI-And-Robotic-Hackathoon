@@ -1,0 +1,26 @@
+{
+  "id": "Chatbot",
+  "title": "AI Assistant",
+  "description": "Welcome to the interactive AI Assistant for the Physical AI & Humanoid Robotics textbook! This AI-powered assistant is designed to help you understand complex concepts, answer questions, and provide explanations based on the textbook content.",
+  "source": "@site/docs/Chatbot.md",
+  "sourceDirName": ".",
+  "slug": "/Chatbot",
+  "permalink": "/Chatbot",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/Chatbot.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "AI Assistant"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Capstone: Autonomous Humanoid (Complete End-to-End System)",
+    "permalink": "/vla/capstone-autonomous-humanoid"
+  },
+  "next": {
+    "title": "Constitution of the Physical AI & Humanoid Robotics Textbook",
+    "permalink": "/Constitution"
+  }
+}

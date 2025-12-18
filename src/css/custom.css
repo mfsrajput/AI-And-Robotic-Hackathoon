@@ -1,0 +1,287 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1a47c4;
+  --ifm-color-primary-darkest: #143a9e;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Humanoid-themed colors */
+  --humanoid-color-primary: #2563eb;
+  --humanoid-color-secondary: #7c3aed;
+  --humanoid-color-accent: #0d9488;
+  --humanoid-bg-light: #f8fafc;
+  --humanoid-text-primary: #1e293b;
+  --humanoid-text-secondary: #64748b;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #bfdbfe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode humanoid-themed colors */
+  --humanoid-color-primary: #3b82f6;
+  --humanoid-color-secondary: #a855f7;
+  --humanoid-color-accent: #2dd4bf;
+  --humanoid-bg-light: #0f172a;
+  --humanoid-text-primary: #f1f5f9;
+  --humanoid-text-secondary: #cbd5e1;
+}
+
+/* Custom humanoid-themed styles */
+.hero--primary {
+  background: linear-gradient(135deg, var(--humanoid-color-primary) 0%, var(--humanoid-color-secondary) 100%);
+}
+
+.button--primary {
+  background-color: var(--humanoid-color-primary);
+  border-color: var(--humanoid-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--humanoid-color-secondary);
+  border-color: var(--humanoid-color-secondary);
+}
+
+/* Enhanced code block styling */
+.code-block {
+  border-left: 4px solid var(--humanoid-color-primary);
+  margin: 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  overflow: hidden;
+}
+
+/* Custom blockquotes for important notes */
+.admonition {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.admonition--note {
+  border-color: var(--humanoid-color-primary);
+}
+
+.admonition--tip {
+  border-color: var(--humanoid-color-accent);
+}
+
+.admonition--caution {
+  border-color: #f59e0b;
+}
+
+.admonition--danger {
+  border-color: #ef4444;
+}
+
+/* Enhanced table styling for WCAG compliance */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  display: table;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+/* Improved accessibility for focus states */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--humanoid-color-primary);
+  outline-offset: 2px;
+}
+
+/* Better contrast for text elements */
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--humanoid-color-primary);
+}
+
+.menu__link--active {
+  color: var(--humanoid-color-primary);
+}
+
+/* Custom styling for diagrams and images */
+.diagram-container {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.5rem;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.diagram-container img,
+.diagram-container svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improved code snippet accessibility */
+.prism-code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+  line-height: var(--ifm-pre-line-height);
+  tab-size: 4;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  -webkit-hyphens: none;
+  -ms-overflow-style: scrollbar;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+/* Custom styles for learning objectives */
+.learning-objectives {
+  background-color: var(--ifm-color-emphasis-100);
+  border-left: 4px solid var(--humanoid-color-primary);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.learning-objectives h4 {
+  margin-top: 0;
+  color: var(--humanoid-text-primary);
+}
+
+.learning-objectives ul {
+  margin-bottom: 0;
+}
+
+/* Custom styles for exercises and examples */
+.exercise-box {
+  border: 2px dashed var(--humanoid-color-accent);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.example-box {
+  border: 2px solid var(--humanoid-color-primary);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Improved heading anchor styling */
+.header-anchor {
+  opacity: 0;
+  margin-left: 0.5rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+*:hover > .header-anchor,
+.header-anchor:focus {
+  opacity: 1;
+}
+
+/* Better styling for inline code */
+.markdown :not(:where(.prism-code, .prism-code span)) code {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-content);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: var(--ifm-code-font-size);
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Improved list styling */
+.markdown ol,
+.markdown ul {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.markdown ol li,
+.markdown ul li {
+  margin-bottom: 0.5rem;
+}
+
+.markdown ol li:last-child,
+.markdown ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Better styling for blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--humanoid-color-primary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--humanoid-text-secondary);
+  font-style: italic;
+}
+
+/* Custom styling for accessibility compliance */
+/* Ensure sufficient color contrast */
+.alert--primary {
+  --ifm-alert-background-color: var(--ifm-color-primary-lightest);
+  --ifm-alert-foreground-color: var(--humanoid-text-primary);
+}
+
+.alert--secondary {
+  --ifm-alert-background-color: var(--ifm-color-emphasis-100);
+  --ifm-alert-foreground-color: var(--humanoid-text-primary);
+}
+
+.alert--success {
+  --ifm-alert-background-color: #d1fae5;
+  --ifm-alert-foreground-color: #065f46;
+}
+
+.alert--danger {
+  --ifm-alert-background-color: #fee2e2;
+  --ifm-alert-foreground-color: #991b1b;
+}
+
+.alert--warning {
+  --ifm-alert-background-color: #fef3c7;
+  --ifm-alert-foreground-color: #92400e;
+}
+
+.alert--info {
+  --ifm-alert-background-color: #dbeafe;
+  --ifm-alert-foreground-color: #1e40af;
+}

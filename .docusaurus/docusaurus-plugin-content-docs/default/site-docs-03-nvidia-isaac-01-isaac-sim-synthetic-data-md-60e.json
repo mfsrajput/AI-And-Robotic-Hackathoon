@@ -1,0 +1,28 @@
+{
+  "id": "nvidia-isaac/isaac-sim-synthetic-data",
+  "title": "Isaac Sim & Synthetic Data Generation",
+  "description": "Learning Objectives",
+  "source": "@site/docs/03-nvidia-isaac/01-isaac-sim-synthetic-data.md",
+  "sourceDirName": "03-nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-sim-synthetic-data",
+  "permalink": "/nvidia-isaac/isaac-sim-synthetic-data",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/03-nvidia-isaac/01-isaac-sim-synthetic-data.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Isaac Sim & Synthetic Data Generation"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Creating Complete Digital Twins",
+    "permalink": "/digital-twin/creating-complete-digital-twins"
+  },
+  "next": {
+    "title": "Isaac ROS + Hardware-Accelerated VSLAM",
+    "permalink": "/nvidia-isaac/isaac-ros-vslam-perception"
+  }
+}

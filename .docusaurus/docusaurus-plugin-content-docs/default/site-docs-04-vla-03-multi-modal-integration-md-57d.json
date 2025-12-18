@@ -1,0 +1,28 @@
+{
+  "id": "vla/multi-modal-integration",
+  "title": "Multi-Modal Integration",
+  "description": "Learning Objectives",
+  "source": "@site/docs/04-vla/03-multi-modal-integration.md",
+  "sourceDirName": "04-vla",
+  "slug": "/vla/multi-modal-integration",
+  "permalink": "/vla/multi-modal-integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/mfsrajput/AI-And-Robotic-Hackathoon/edit/main/docs/04-vla/03-multi-modal-integration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Multi-Modal Integration"
+  },
+  "sidebar": "moduleSidebar",
+  "previous": {
+    "title": "Chapter 2: LLM Task & Motion Planning (Natural Language → ROS Actions)",
+    "permalink": "/vla/llm-task-and-motion-planning"
+  },
+  "next": {
+    "title": "Chapter 4: Capstone: Autonomous Humanoid (Complete End-to-End System)",
+    "permalink": "/vla/capstone-autonomous-humanoid"
+  }
+}

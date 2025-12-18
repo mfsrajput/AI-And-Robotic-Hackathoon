@@ -1,0 +1,31 @@
+graph TB
+    A[User Voice Command] --> B[Voice Processing Module]
+    B --> C[Whisper Transcription]
+    C --> D[Command Classification]
+    D --> E[LLM Task Planning]
+    E --> F[Action Sequence Generation]
+    F --> G[Multi-Modal Fusion]
+    G --> H[ROS Action Servers]
+    H --> I[Robot Execution]
+
+    J[Digital Twin] -.-> E
+    K[Isaac Sim] -.-> G
+    L[Sensors] --> G
+    M[Cameras] --> G
+
+    I --> N[Environment Feedback]
+    N --> G
+
+    O[Capstone Project] -.-> B
+    O -.-> E
+    O -.-> G
+    O -.-> I
+
+    style A fill:#e1f5fe
+    style D fill:#f3e5f5
+    style E fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fce4ec
+    style O fill:#fff9c4
+
+    linkStyle 10 stroke:#ff0000,stroke-width:2px
