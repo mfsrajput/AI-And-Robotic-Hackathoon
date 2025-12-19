@@ -5,8 +5,8 @@ import TextSelectionHandler from '@site/src/components/TextSelectionHandler';
 
 // Default backend URL - can be overridden by environment or build process
 const BACKEND_URL = typeof window !== 'undefined'
-  ? window.CHATBOT_BACKEND_URL || (typeof process !== 'undefined' && process.env ? process.env.CHATBOT_BACKEND_URL : null) || "http://localhost:8000"
-  : "http://localhost:8000";
+  ? window.CHATBOT_BACKEND_URL || (typeof process !== 'undefined' && process.env ? process.env.CHATBOT_BACKEND_URL : null) || "http://localhost:5000"
+  : "http://localhost:5000";
 
 export default function Layout(props) {
   const [selectedText, setSelectedText] = useState(null);
