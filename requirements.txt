@@ -1,9 +1,9 @@
-# Updated qdrant-client to >=1.13.0 for Python 3.13 compatibility (Render default) and fastavro wheel build fix
+# Updated qdrant-client to 1.14.0 for Python 3.13 compatibility and fastavro wheel build fix (Render default)
 # Updated tiktoken to avoid Rust compilation issues
 requests==2.31.0
 beautifulsoup4==4.12.2
 cohere==4.24
-qdrant-client>=1.13.0
+qdrant-client==1.14.0
 tiktoken>=0.7.0
 python-dotenv==1.0.0
 fastapi==0.104.1
