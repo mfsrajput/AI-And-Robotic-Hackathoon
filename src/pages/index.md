@@ -20,7 +20,7 @@ This comprehensive textbook provides a complete educational journey into the wor
 This textbook is designed for computer science and engineering students, researchers, and professionals interested in robotics, artificial intelligence, and autonomous systems. No prior robotics experience is required, but basic programming knowledge is recommended.
 
 <div class="text--center margin-bottom--lg">
-  <a class="button button--primary button--lg" href="/intro">
+  <a class="button button--primary button--lg" href="/AI-And-Robotic-Hackathoon/intro/">
     Start Learning
   </a>
 </div>

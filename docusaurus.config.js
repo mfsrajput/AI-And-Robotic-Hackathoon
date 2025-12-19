@@ -105,27 +105,27 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/intro',
+                to: '/AI-And-Robotic-Hackathoon/intro',
               },
               {
                 label: 'Module 1: ROS 2 Fundamentals',
-                to: '/category/module-1-the-robotic-nervous-system-ros-2',
+                to: '/AI-And-Robotic-Hackathoon/category/module-1-the-robotic-nervous-system-ros-2',
               },
               {
                 label: 'Module 2: Digital Twin',
-                to: '/category/module-2-the-digital-twin-gazebo--unity',
+                to: '/AI-And-Robotic-Hackathoon/category/module-2-the-digital-twin-gazebo--unity',
               },
               {
                 label: 'Module 3: NVIDIA Isaac',
-                to: '/category/module-3-the-ai-robot-brain-nvidia-isaac',
+                to: '/AI-And-Robotic-Hackathoon/category/module-3-the-ai-robot-brain-nvidia-isaac',
               },
               {
                 label: 'Module 4: VLA System',
-                to: '/category/module-4-vision-language-action-vla--capstone',
+                to: '/AI-And-Robotic-Hackathoon/category/module-4-vision-language-action-vla--capstone',
               },
               {
                 label: 'AI Assistant',
-                to: '/chatbot',
+                to: '/AI-And-Robotic-Hackathoon/chatbot',
               },
             ],
           },

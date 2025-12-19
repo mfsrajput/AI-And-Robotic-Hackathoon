@@ -1,185 +1,142 @@
 {
-  "/__docusaurus/debug-5ff": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/config-5ba": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/content-a2b": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    },
-    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
-  },
-  "/__docusaurus/debug/globalData-c3c": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/metadata-156": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/registry-88c": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/routes-000": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
   "/-2bc": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__comp": "1f391b9e",
     "__context": {
-      "plugin": "plugin---a-74-9d6"
+      "plugin": "a7456010"
     },
-    "content": "content---f-39-267"
+    "content": "f3976560"
   },
   "/-a05": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---aba-d70"
+      "plugin": "aba21aa0"
     }
   },
   "/-baa": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---22-d-307"
+    "__comp": "a7bd4aaa",
+    "__props": "22dd74f7"
   },
   "/-73b": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/category/module-1-the-robotic-nervous-system-ros-2-a2a": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---category-module-1-the-robotic-nervous-system-ros-264-c-c14"
+    "__comp": "14eb3368",
+    "__props": "64c66f4b"
   },
   "/category/module-2-the-digital-twin-gazebo--unity-b86": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---category-module-2-the-digital-twin-gazebo-unity-290-e43"
+    "__comp": "14eb3368",
+    "__props": "2906ff1a"
   },
   "/category/module-3-the-ai-robot-brain-nvidia-isaac-2a8": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---category-module-3-the-ai-robot-brain-nvidia-isaac-516-3b4"
+    "__comp": "14eb3368",
+    "__props": "51632788"
   },
   "/category/module-4-vision-language-action-vla--capstone-145": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "__props": "__props---category-module-4-vision-language-action-vla-capstone-04-d-e12"
+    "__comp": "14eb3368",
+    "__props": "04d39336"
   },
   "/Chatbot-ae9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---chatbotb-17-838"
+    "__comp": "17896441",
+    "content": "b176eda9"
   },
   "/Constitution-0e2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---constitution-660-f7b"
+    "__comp": "17896441",
+    "content": "660e1ec0"
   },
   "/contributors-101": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---contributors-9-ac-392"
+    "__comp": "17896441",
+    "content": "9acd8749"
   },
   "/deployment-a8a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---deploymenta-37-1b2"
+    "__comp": "17896441",
+    "content": "a3713279"
   },
   "/digital-twin/creating-complete-digital-twins-d09": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---digital-twin-creating-complete-digital-twins-069-b06"
+    "__comp": "17896441",
+    "content": "069fa5d1"
   },
   "/digital-twin/gazebo-physics-and-world-building-508": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---digital-twin-gazebo-physics-and-world-building-8-c-5-d97"
+    "__comp": "17896441",
+    "content": "8c56aeae"
   },
   "/digital-twin/simulating-sensors-lidar-imu-depth-c48": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---digital-twin-simulating-sensors-lidar-imu-depthd-53-8de"
+    "__comp": "17896441",
+    "content": "d5366003"
   },
   "/digital-twin/unity-for-high-fidelity-hri-a39": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---digital-twin-unity-for-high-fidelity-hrid-1-d-ba5"
+    "__comp": "17896441",
+    "content": "d1d0e07a"
   },
   "/getting-started-23e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---getting-startedd-58-456"
+    "__comp": "17896441",
+    "content": "d589d3a7"
   },
   "/intro-9fa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---intro-0-e-3-7b8"
+    "__comp": "17896441",
+    "content": "0e384e19"
   },
   "/local-verification-checklist-a0e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---local-verification-checklist-34-e-4ed"
+    "__comp": "17896441",
+    "content": "34ecbc75"
   },
   "/nvidia-isaac/isaac-ros-vslam-perception-cd8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---nvidia-isaac-isaac-ros-vslam-perception-66-e-02e"
+    "__comp": "17896441",
+    "content": "66e19751"
   },
   "/nvidia-isaac/isaac-sim-synthetic-data-517": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---nvidia-isaac-isaac-sim-synthetic-data-60-e-e4f"
+    "__comp": "17896441",
+    "content": "60ecf20f"
   },
   "/nvidia-isaac/nav2-bipedal-locomotion-8a9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---nvidia-isaac-nav-2-bipedal-locomotion-9-f-0-01b"
+    "__comp": "17896441",
+    "content": "9f050184"
   },
   "/nvidia-isaac/sim-to-real-transfer-ecf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---nvidia-isaac-sim-to-real-transfer-66-d-da1"
+    "__comp": "17896441",
+    "content": "66d312c8"
   },
   "/preface-85b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---prefacee-31-842"
+    "__comp": "17896441",
+    "content": "e31563f4"
   },
   "/RAG-Chatbot-Constitution-2bd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---rag-chatbot-constitution-3-c-2-56f"
+    "__comp": "17896441",
+    "content": "3c2c754f"
   },
   "/ros2/nodes-topics-services-actions-b87": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ros-2-nodes-topics-services-actions-3-f-8-a21"
+    "__comp": "17896441",
+    "content": "3f8de5bd"
   },
   "/ros2/python-rclpy-bridge-a5a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ros-2-python-rclpy-bridgee-8-c-6f9"
+    "__comp": "17896441",
+    "content": "e8c92642"
   },
   "/ros2/ros2-and-embodied-control-202": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ros-2-ros-2-and-embodied-control-662-e06"
+    "__comp": "17896441",
+    "content": "662b9e04"
   },
   "/ros2/urdf-xacro-for-humanoids-d41": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---ros-2-urdf-xacro-for-humanoids-9-b-2-9e4"
+    "__comp": "17896441",
+    "content": "9b2c4578"
   },
   "/troubleshooting-810": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---troubleshooting-9-d-9-b37"
+    "__comp": "17896441",
+    "content": "9d9f8394"
   },
   "/vla/capstone-autonomous-humanoid-7e1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---vla-capstone-autonomous-humanoidbd-8-1d0"
+    "__comp": "17896441",
+    "content": "bd854a97"
   },
   "/vla/llm-task-and-motion-planning-667": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---vla-llm-task-and-motion-planningcd-8-2b9"
+    "__comp": "17896441",
+    "content": "cd8c090e"
   },
   "/vla/multi-modal-integration-9b7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---vla-multi-modal-integration-57-d-57f"
+    "__comp": "17896441",
+    "content": "57d3f035"
   },
   "/vla/voice-to-action-with-whisper-875": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---vla-voice-to-action-with-whisper-789-fcc"
+    "__comp": "17896441",
+    "content": "7892f517"
   }
 }
