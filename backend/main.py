@@ -27,36 +27,36 @@ def get_all_urls():
     Get all URLs from the live book site.
     Hardcoded list of major chapter URLs from the live site.
     """
-    base_url = "https://mfsrajput.github.io/AI-And-Robotic-Hackathoon"
+    base_url = "http://localhost:3003"
     urls = [
         f"{base_url}/",
-        f"{base_url}/docs/intro",
-        f"{base_url}/docs/preface",
-        f"{base_url}/docs/contributors",
-        f"{base_url}/docs/getting-started",
-        f"{base_url}/docs/01-ros2/",
-        f"{base_url}/docs/02-digital-twin/",
-        f"{base_url}/docs/03-nvidia-isaac/",
-        f"{base_url}/docs/04-vla/",
-        f"{base_url}/docs/troubleshooting",
-        f"{base_url}/docs/local-verification-checklist",
+        f"{base_url}/intro/",
+        f"{base_url}/preface/",
+        f"{base_url}/contributors/",
+        f"{base_url}/getting-started/",
+        f"{base_url}/ros2/",
+        f"{base_url}/digital-twin/",
+        f"{base_url}/nvidia-isaac/",
+        f"{base_url}/vla/",
+        f"{base_url}/troubleshooting/",
+        f"{base_url}/local-verification-checklist/",
         # Add more specific chapter pages if needed
-        f"{base_url}/docs/01-ros2/01-ros2-and-embodied-control",
-        f"{base_url}/docs/01-ros2/02-nodes-topics-services-actions",
-        f"{base_url}/docs/01-ros2/03-urdf-xacro-for-humanoids",
-        f"{base_url}/docs/01-ros2/04-python-rclpy-bridge",
-        f"{base_url}/docs/02-digital-twin/01-gazebo-physics-and-world-building",
-        f"{base_url}/docs/02-digital-twin/02-simulating-sensors-lidar-imu-depth",
-        f"{base_url}/docs/02-digital-twin/03-unity-for-high-fidelity-hri",
-        f"{base_url}/docs/02-digital-twin/04-creating-complete-digital-twins",
-        f"{base_url}/docs/03-nvidia-isaac/01-isaac-sim-synthetic-data",
-        f"{base_url}/docs/03-nvidia-isaac/02-isaac-ros-vslam-perception",
-        f"{base_url}/docs/03-nvidia-isaac/03-nav2-bipedal-locomotion",
-        f"{base_url}/docs/03-nvidia-isaac/04-sim-to-real-transfer",
-        f"{base_url}/docs/04-vla/01-voice-to-action-with-whisper",
-        f"{base_url}/docs/04-vla/02-llm-task-and-motion-planning",
-        f"{base_url}/docs/04-vla/03-multi-modal-integration",
-        f"{base_url}/docs/04-vla/04-capstone-autonomous-humanoid"
+        f"{base_url}/ros2/ros2-and-embodied-control/",
+        f"{base_url}/ros2/nodes-topics-services-actions/",
+        f"{base_url}/ros2/urdf-xacro-for-humanoids/",
+        f"{base_url}/ros2/python-rclpy-bridge/",
+        f"{base_url}/digital-twin/gazebo-physics-and-world-building/",
+        f"{base_url}/digital-twin/simulating-sensors-lidar-imu-depth/",
+        f"{base_url}/digital-twin/unity-for-high-fidelity-hri/",
+        f"{base_url}/digital-twin/creating-complete-digital-twins/",
+        f"{base_url}/nvidia-isaac/isaac-sim-synthetic-data/",
+        f"{base_url}/nvidia-isaac/isaac-ros-vslam-perception/",
+        f"{base_url}/nvidia-isaac/nav2-bipedal-locomotion/",
+        f"{base_url}/nvidia-isaac/sim-to-real-transfer/",
+        f"{base_url}/vla/voice-to-action-with-whisper/",
+        f"{base_url}/vla/llm-task-and-motion-planning/",
+        f"{base_url}/vla/multi-modal-integration/",
+        f"{base_url}/vla/capstone-autonomous-humanoid/"
     ]
     return urls
 
@@ -161,21 +161,36 @@ def embed(texts, input_type="search_document"):
     if not texts:
         return []
 
-    try:
-        response = cohere_client.embed(
-            texts=texts,
-            model="embed-english-v3.0",
-            input_type=input_type
-        )
-        return response.embeddings
-    except cohere.CohereError as e:
-        logging.error(f"Cohere error generating embeddings: {str(e)}")
-        print(f"Cohere error generating embeddings: {str(e)}")
-        return []
-    except Exception as e:
-        logging.error(f"Error generating embeddings: {str(e)}")
-        print(f"Error generating embeddings: {str(e)}")
-        return []
+    import time
+    max_retries = 3
+    retry_delay = 2  # seconds
+
+    for attempt in range(max_retries):
+        try:
+            response = cohere_client.embed(
+                texts=texts,
+                model="embed-english-v3.0",
+                input_type=input_type
+            )
+            return response.embeddings
+        except Exception as e:
+            error_msg = str(e)
+            logging.error(f"Error generating embeddings (attempt {attempt + 1}/{max_retries}): {error_msg}")
+            print(f"Error generating embeddings (attempt {attempt + 1}/{max_retries}): {error_msg}")
+
+            # Check if it's a rate limit error
+            if "429" in error_msg or "TooManyRequests" in error_msg or "rate limit" in error_msg.lower():
+                print(f"Rate limit hit. Waiting {retry_delay * (attempt + 1)} seconds before retry...")
+                time.sleep(retry_delay * (attempt + 1))
+            elif attempt == max_retries - 1:  # Last attempt
+                logging.error(f"Failed to generate embeddings after {max_retries} attempts")
+                print(f"Failed to generate embeddings after {max_retries} attempts")
+                return []
+            else:
+                # Wait before retrying for other errors
+                time.sleep(retry_delay)
+
+    return []
 
 def create_collection():
     """
@@ -216,6 +231,7 @@ def save_chunks_to_qdrant(chunks_with_metadata):
     collection_name = "rag_embedding"
 
     # Prepare points for upsert
+    import time
     points = []
     for idx, (chunk, metadata) in enumerate(chunks_with_metadata):
         # Generate embedding for the chunk
@@ -233,15 +249,43 @@ def save_chunks_to_qdrant(chunks_with_metadata):
             )
             points.append(point)
 
-    # Upsert points to collection
-    if points:
-        client.upsert(
-            collection_name=collection_name,
-            points=points
-        )
-        print(f"Saved {len(points)} chunks to Qdrant collection {collection_name}")
+        # Add a delay to prevent rate limiting (100 calls per minute = 1.67 calls per second)
+        time.sleep(0.6)  # 600ms delay between chunks to stay under rate limit
 
-    return len(points)
+    # Upsert points to collection in batches to avoid timeout
+    if points:
+        batch_size = 50  # Process in smaller batches to avoid timeout
+        total_saved = 0
+
+        for i in range(0, len(points), batch_size):
+            batch = points[i:i + batch_size]
+            try:
+                client.upsert(
+                    collection_name=collection_name,
+                    points=batch
+                )
+                total_saved += len(batch)
+                print(f"Saved batch {i//batch_size + 1}: {len(batch)} chunks to Qdrant (total: {total_saved}/{len(points)})")
+            except Exception as e:
+                print(f"Error saving batch {i//batch_size + 1}: {str(e)}")
+                print(f"Retrying with smaller batch...")
+                # If batch fails, try smaller chunks
+                for point in batch:
+                    try:
+                        client.upsert(
+                            collection_name=collection_name,
+                            points=[point]
+                        )
+                        total_saved += 1
+                    except Exception as e2:
+                        print(f"Failed to save individual point {point.id}: {str(e2)}")
+                continue
+
+        print(f"Saved {total_saved} chunks to Qdrant collection {collection_name}")
+    else:
+        total_saved = 0
+
+    return total_saved
 
 # Data models for API
 class QueryRequest(BaseModel):

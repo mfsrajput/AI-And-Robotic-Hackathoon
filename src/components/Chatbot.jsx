@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../css/chatbot.css';
 
-const Chatbot = ({ backendUrl = "http://localhost:5000/chat" }) => {
+const Chatbot = ({ backendUrl = "http://localhost:8000/chat" }) => {
   // Define the exact chat endpoint to avoid path issues
-  const CHAT_ENDPOINT = "http://localhost:5000/chat";  // no trailing slash
+  const CHAT_ENDPOINT = "http://localhost:8000/chat";  // no trailing slash
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     { id: 1, type: 'assistant', content: 'Hello! I\'m your AI assistant for the Physical AI & Humanoid Robotics textbook. How can I help you today?' }
